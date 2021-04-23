@@ -1,0 +1,48 @@
+
+#cuadrado{
+    width: 200px;
+    height: 200px;
+    background: #aaa;
+    animation-name: miAnimacion;
+    animation-duration: 5s;
+    animation-delay: 2ms;
+    position: relative;
+    animation-direction: reverse;
+    animation-timing-function: linear; /* velocitat de la animacio, linear, més rápid una part...*/ 
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes miAnimacion {
+    0%{background: #aaa;
+        left: 0; top: 0;
+
+    }
+
+    25%{background: red;
+        left: 300px; top: 0;
+    
+    }
+
+    50%{background: green;
+        left: 300px; top: 300px;
+
+    }
+
+    75%{background: pink;
+        left: 0; top: 300px;
+    
+    }
+
+
+    100%{background: blue;
+        left: 0; top: 0;
+
+    }
+}
+
+
+/*
+https://www.w3schools.com/css/css3_animations.asp
+https://www.w3schools.com/css/css3_transitions.asp aquí es fa amb la propietat transition
+https://www.creativebloq.com/inspiration/css-animation-examples avançades*/

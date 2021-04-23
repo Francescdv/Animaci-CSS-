@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    background: #ddd;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.caja{
+    margin: 150px 15px;
+    width: 150px;
+    height: 150px;
+    background: crimson;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    line-height: 150px;
+    transition: all 1s;
+}
+
+.caja:nth-child(1){
+    transform: translateY(-100px);
+    /*(X o Y o translate 100px 100px )*/
+
+}
+
+.caja:nth-child(2){
+    transform: rotate(360deg);
+    /*6rad, 400grad 1turn */
+
+}
+
+.caja:nth-child(3){
+    transform: scaleY(2);
+    /* X i/o Y*/
+
+}
+
+
+.caja:nth-child(4){
+    transform: skewY(10deg);
+    /* X i/o Y*/
+
+}
+
+.caja:nth-child(2):hover{
+    transform: skewY(10deg);
+    /* X i/o Y*/
+ 
+}
+
+
+/* 
+
+Valors incicials:
+transform origin: center center;
+de forma predeterminada s'escala des del centre
+
+a on s'expliquen els 4 nivells de transformació. Veureu que un aspecte molt important a tenir en compte de cara a la maquetació és que les transformacions de translació, NO AFECTEN al flux de manera que no desplaça a la resta d'elements. També tingues present que els elements escalats, la seva caixa es MANTÉ AMB LA MATEIXA MIDA
+Atenció també a quan rotem perquè si ho fem i després apliquen un desplaçament, ho farà segons el seu eix de rotació, i si no el tenim localitzat, pot provocar efectes poc desitjats.
+
+*/
+
+
+
+/* transform: matrix(a,b,c,d,e,f) 
+a, d scale
+   b, c = skew
+   e, f = translate
+*/
